@@ -108,10 +108,8 @@ private:
     float newton(int num,int up,int down){
         int temp = num;
         num = pot(num,up);
-        cout<<num<<endl;
-        double x = pivo(pot(temp,23),up,down);
+        double x = pivo(pot(temp,down),up,down);
         for (int i = 0; i < 100; i++) {
-            cout<<x<<endl;
             x = x - ((num - pot(x,down))/((-(down) * pot(x,(down-1)))));
         }
         return x;
