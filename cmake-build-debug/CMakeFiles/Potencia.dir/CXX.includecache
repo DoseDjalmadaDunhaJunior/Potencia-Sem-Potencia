@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Volumes/HD_EXTERNO/paradas_de_algoritmo/Quarto_semestre/Potencia/Fracao.hpp
+iostream
+-
+
+/Volumes/HD_EXTERNO/paradas_de_algoritmo/Quarto_semestre/Potencia/Potencia.hpp
+Fracao.hpp
+/Volumes/HD_EXTERNO/paradas_de_algoritmo/Quarto_semestre/Potencia/Fracao.hpp
+
+/Volumes/HD_EXTERNO/paradas_de_algoritmo/Quarto_semestre/Potencia/main.cpp
+Potencia.hpp
+/Volumes/HD_EXTERNO/paradas_de_algoritmo/Quarto_semestre/Potencia/Potencia.hpp
+

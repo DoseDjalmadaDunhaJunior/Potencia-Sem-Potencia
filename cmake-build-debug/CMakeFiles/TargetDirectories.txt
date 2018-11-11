@@ -1,0 +1,3 @@
+/Volumes/HD_EXTERNO/paradas_de_algoritmo/Quarto_semestre/Potencia/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Volumes/HD_EXTERNO/paradas_de_algoritmo/Quarto_semestre/Potencia/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Volumes/HD_EXTERNO/paradas_de_algoritmo/Quarto_semestre/Potencia/cmake-build-debug/CMakeFiles/Potencia.dir
