@@ -6,7 +6,6 @@
 #define POTENCIA_FRACAO_HPP
 #include <iostream>
 using namespace std;
-
 class Fracao {
 public:
     void transforma(double a){

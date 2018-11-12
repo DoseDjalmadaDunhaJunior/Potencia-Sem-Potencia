@@ -57,12 +57,11 @@ public:
 
     //faz um pivo que é um valor relativamente proximo da raiz
     float pivo(float num, int up,int down){
-        float anterior = 0;
         float atual = -1;
         float aux;
         int ant = 0;
         int atu = 0;
-        while(atual < 0){
+        while(atual < 1){
             aux = (pot(atu,down) - num);
             //esse if certifica que nao vai ser dividido por zero
             if(aux != 0){
@@ -76,11 +75,10 @@ public:
 
     //faz um pivo que é um valor relativamente proximo da raiz
     float pivo(int num, int up,int down){
-        float anterior = 0;
         float atual = -1;
         float aux;
         int ant = 0;
-        int atu = 0;
+        int atu = 1;
         while(atual < 0){
             aux = (pot(atu,down) - num);
             //esse if certifica que nao vai ser dividido por zero
@@ -95,28 +93,50 @@ public:
 private:
     //para fazer com double
     float newton(double num,int up,int down){
+        double temp = num;
         num = pot(num,up);
-        cout<<num<<endl;
-        double x = num/2;
+        bool ok = false;
+        if(respostaInt > 2147483647){
+            respostaInt = respostaInt/100000;
+            num = (int)respostaInt;
+            ok = true;
+        }
+        double x = pivo(pot(temp,down),up,down);
         for (int i = 0; i < 100; i++) {
             cout<<x<<endl;
             x = x - ((num - pot(x,down))/((-(down) * pot(x,(down-1)))));
         }
-        return x;
+        if(ok){
+            return x*100000;
+        }
+        else {
+            return x;
+        }
     }
     //para fazer com int
     float newton(int num,int up,int down){
         int temp = num;
         num = pot(num,up);
+        bool ok = false;
+        if(respostaInt > 2147483647){
+            respostaInt = respostaInt/100000;
+            num = (int)respostaInt;
+            ok = true;
+        }
         double x = pivo(pot(temp,down),up,down);
         for (int i = 0; i < 100; i++) {
             x = x - ((num - pot(x,down))/((-(down) * pot(x,(down-1)))));
         }
-        return x;
+        if(ok){
+            return x*100000;
+        }
+        else {
+            return x;
+        }
     }
 
 
-    int respostaInt;
+    long int respostaInt;
     float respostaFloat;
     float respRaiz;
 };

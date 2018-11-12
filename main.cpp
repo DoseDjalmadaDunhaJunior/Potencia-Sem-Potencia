@@ -2,6 +2,6 @@
 
 int main() {
     Potencia oi;
-    cout<<oi.pot(5,2.5)<<endl;
+    cout<<oi.pot(5,3.4)<<endl;
     return 0;
 }
